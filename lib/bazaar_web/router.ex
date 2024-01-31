@@ -16,8 +16,7 @@ defmodule BazaarWeb.Router do
 
   scope "/", BazaarWeb do
     pipe_through :browser
-
-    get "/", PageController, :home
+    live "/", CounterLive, :home
   end
 
   # Other scopes may use custom stacks.
