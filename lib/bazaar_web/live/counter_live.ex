@@ -4,11 +4,11 @@ defmodule BazaarWeb.CounterLive do
   @impl true
   def mount(_, _, socket) do
     {:ok,
-      socket
-      |> assign(:count_1, 0)
-      |> assign(:count_2, 0)
-      |> assign(:count_3, 0)
-      |> assign(:count_4, 0)}
+     socket
+     |> assign(:count_1, 0)
+     |> assign(:count_2, 0)
+     |> assign(:count_3, 0)
+     |> assign(:count_4, 0)}
   end
 
   @impl true
