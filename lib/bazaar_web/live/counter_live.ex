@@ -26,7 +26,6 @@ defmodule BazaarWeb.CounterLive do
     {:noreply, update(socket, :"count_#{id}", &(&1 + 1))}
   end
 
-  @impl true
   def handle_event("decrement", %{"counter" => id}, socket) do
     {:noreply, update(socket, :"count_#{id}", &(&1 - 1))}
   end
@@ -36,7 +35,7 @@ defmodule BazaarWeb.CounterLive do
     <div class="mt-2 ml-2">
       <button class="bg-gray-300 py-1 px-2" phx-click="increment" phx-value-counter={@id}>+</button>
       <button class="bg-gray-300 py-1 px-2" phx-click="decrement" phx-value-counter={@id}>-</button>
-      you clicked <%= @count %> times
+      you clicked me <%= @count %> times
     </div>
     """
   end
